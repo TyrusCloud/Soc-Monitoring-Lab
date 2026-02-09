@@ -4,147 +4,113 @@ Ubuntu SOC Server Investigating RHEL Victim
 ---
 
 ### Screenshot 1: Network Configuration
-Established SOC server and monitored endpoint on same network.
+
 
 ![SOC VM](images/1.png) 
 ![Log VM](images/2.png) 
 
 
 **What is shown:**  
-VMware interface displaying two Linux virtual machines configured for the lab environment.
-A Target machine & a SOC.Server machine to monitor the Target machine.
 
-**Why this matters:**  
-This establishes a controlled, isolated cybersecurity lab using VMware, a virtualization platform commonly approved and used in DoD and contractor environments.
+Established SOC server and monitored endpoint on same network.
 
-**What this demonstrates:**  
-- Proper use of virtualization for security testing  
-- Safe replication of production-like systems  
-- Familiarity with enterprise-grade tooling
 
 ---
 
-### Screenshot 2: Linux Operating System Verification
+### Screenshot 2: Prepare RHEL Victim
 
-![OS Verification](images/linuxos.png)
-**What is shown:**  
-Terminal output confirming Linux distribution and version using `/etc/os-release`.
-
-**Why this matters:**  
-Accurate OS identification is critical for vulnerability management, patching, and DISA STIG compliance in DoD environments.
-
-**What this demonstrates:**  
-- System awareness and configuration validation  
-- Compliance-focused mindset  
-- Linux administration fundamentals
-
----
-
-### Screenshot 3: Successful SSH Connectivity
-
-![SSH Access](images/sshlogin.png)
+![OS Verification](images/3.png)
 
 **What is shown:**  
-Successful SSH connection from the Server VM to Target system.
 
-**Why this matters:**  
-SSH is a primary administrative access method and a common attack vector monitored by SOC teams.
-
-**What this demonstrates:**  
-- Secure remote access configuration  
-- Understanding of monitored attack surfaces  
-- Realistic administrative workflows
+SSH running on victim & Enabled remote access service to simulate attack surface.
 
 ---
 
-### Screenshot 4: Logging Services Enabled
+### Screenshot 3: Create Target User
 
-![Logging Services](images/logservice.png)
+![SSH Access](images/4.png)
 
 **What is shown:**  
-`rsyslog` service running and authentication logs visible on the monitored (Target) system.
 
-**Why this matters:**  
-Authentication and system logs are foundational for security monitoring, auditing, and forensic investigations.
-
-**What this demonstrates:**  
-- Knowledge of Linux logging architecture  
-- Ability to locate and interpret security logs  
-- Audit-readiness
+Created standard user to simulate credential targeting.
 
 ---
 
-### Screenshot 5: Failed Authentication Events
+### Screenshot 4: SOC Server Setup (Ubuntu)
 
-![Failed Logins](images/failedssh.png)
+![Logging Services](images/5.png)
+
+**What is shown:** 
+
+Installed monitoring tools & Configured SOC server with network and log analysis utilities.
+
+---
+
+### Screenshot 5: ATTACK SIMULATION
+
+![Failed Logins](images/6.png)
 
 **What is shown:**  
-Multiple failed SSH login attempts recorded in system logs.
 
-**Why this matters:**  
-Repeated authentication failures are a key indicator of brute-force or unauthorized access attempts.
-
-**What this demonstrates:**  
-- Controlled generation of security events  
-- Awareness of attacker behavior  
-- SOC-relevant detection skills
+Simulated external reconnaissance identifying exposed services.
 
 ---
 
-### Screenshot 6: Centralized Log Forwarding Configuration
+### Screenshot 6: SOC Investigation
 
-![Log Forwarding](images/moduleconf.png)
+![Log Forwarding](images/7.png)
 
 **What is shown:**  
-`rsyslog` configured to forward logs from the Target system to a centralized logging server (SOC.Server).
 
-**Why this matters:**  
-Centralized logging ensures logs remain available and protected even if a system is compromised.
-
-**What this demonstrates:**  
-- Centralized security architecture knowledge  
-- Understanding of log integrity and availability  
-- Enterprise monitoring concepts
+Connection attempts in logs. Detected reconnaissance activity through abnormal connection logs.
 
 ---
 
-### Screenshot 7: Log Ingestion on Monitoring System
+### Screenshot 7: Attack 2 — SSH Brute Force
 
-![Log Ingestion](images/ubuntulogs.png)
+![Log Ingestion](images/8.png)
 
 **What is shown:**  
-Logs from the Target Linux system appearing on the monitoring Server.
 
-**Why this matters:**  
-SOC operations depend on reliable telemetry ingestion to detect and investigate incidents.
-
-**What this demonstrates:**  
-- End-to-end visibility  
-- Verification of data flow  
-- SOC troubleshooting capability
+Failed login attempts. Identified brute-force activity through repeated authentication failures.
 
 ---
 
-### Screenshot 8: Log Filtering and Analysis
+### Screenshot 8: Successful Compromise
 
-![Log Analysis](images/failedlogins.png)
+![Log Analysis](images/9.png)
 
 **What is shown:**  
-Filtered authentication and SSH events displayed on the monitoring Server system.
-Repeated authentication failures clustered over time.
 
-**Why this matters:**  
-SOC analysts must quickly reduce large volumes of log data into actionable security signals.
-Threat detection relies on identifying behavioral patterns & correlated events.
+Successful login event, Confirmed unauthorized access to user account.
 
-**What this demonstrates:**  
 
-- Log filtering techniques  
-- Pattern recognition  
-- Analyst-level workflows
-- Analytical thinking  
-- Understanding of brute-force indicators  
-- Threat detection fundamentals
----
+### Screenshot 9: Persistence Creation
+
+![Log Analysis](images/10.png)
+
+**What is shown:**  
+
+New unauthorized account, Detected attacker persistence through unauthorized account creation
+
+
+### Screenshot 10: Backdoor Listener
+
+![Log Analysis](images/11.png)
+
+**What is shown:**  
+
+Suspicious port listener, Identified unauthorized network service indicating possible backdoor.
+
+
+### Screenshot 11: SOC INCIDENT RESPONSE
+
+![Log Analysis](images/12.png)
+
+**What is shown:**  
+
+Containment actions applied, Performed containment and eradication procedures
+
 
 #
