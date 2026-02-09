@@ -1,4 +1,6 @@
-# 🛡️ Linux SOC Monitoring Lab — Manual Incident Detection Without SIEM
+# 🛡️ Linux SOC Monitoring Lab & Incident Response 
+
+
 
 ## 📌 Project Overview
 This project simulates a Security Operations Center (SOC) investigation using two Linux virtual machines without SIEM tools.  
