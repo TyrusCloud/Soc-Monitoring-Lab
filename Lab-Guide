@@ -1,41 +1,11 @@
 # 🛡️ Full Linux SOC Monitoring Lab Guide
-## Ubuntu SOC Server Investigating RHEL Victim (No SIEM)
+## Ubuntu SOC Server Investigating RHEL Victim 
 
 ---
-
-# 📌 Project Purpose
-This lab simulates a full cyber attack lifecycle against a RHEL endpoint monitored by an Ubuntu-based SOC workstation.  
-The project demonstrates manual threat detection using native Linux logs and investigative tools without SIEM platforms.
-
----
-
-# 🧱 Lab Architecture
-
-| Role | Operating System | Purpose |
-|------|-----------------|---------|
-| SOC Server | Ubuntu | Monitoring & Investigation |
-| Victim Host | RHEL | Simulated Enterprise Endpoint |
-
-
----
-
-## ✅ Step 1 — Configure Network
-
-Set both VMs to same network:
-- NAT Network OR Host-Only Network
-
----
-
-## ✅ Step 2 — Verify IP Addresses
-
-### Ubuntu SOC Server
-```bash
-ip a
-
 
 ### Screenshot 1: VMware Environment Setup
 
-![VMware Environment](images/1.png) (images/2.png)
+![VMware Environment](images/1.png)
 
 **What is shown:**  
 VMware interface displaying two Linux virtual machines configured for the lab environment.
