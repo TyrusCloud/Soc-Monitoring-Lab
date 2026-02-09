@@ -1,5 +1,5 @@
-# 🛡️ Full Linux SOC Monitoring Lab Guide
-## Ubuntu SOC Server Investigating RHEL Victim 
+ 🛡️ Full Linux SOC Monitoring Lab Guide
+Ubuntu SOC Server Investigating RHEL Victim 
 
 ---
 
@@ -145,8 +145,3 @@ Threat detection relies on identifying behavioral patterns & correlated events.
 ---
 
 #
-
-
-### Closing Statement
-
-This project demonstrates hands-on experience with Linux system administration, centralized logging & security event detection techniques aligned with DoD SOC and system security operations.
