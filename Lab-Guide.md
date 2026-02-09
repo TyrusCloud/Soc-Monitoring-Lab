@@ -7,7 +7,7 @@ Ubuntu SOC Server Investigating RHEL Victim
 Established SOC server and monitored endpoint on same network.
 
 ![SOC VM](images/1.png) 
-![Log VM](images/1.png) 
+![Log VM](images/2.png) 
 
 
 **What is shown:**  
