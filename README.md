@@ -3,7 +3,7 @@
 
 
 ## 📌 Project Overview
-This project simulates a Security Operations Center (SOC) investigation using two Linux virtual machines without SIEM tools.  
+This project simulates a Security Operations Center (SOC) investigation using two Linux virtual machines.  
 An Ubuntu system functions as the SOC monitoring workstation while a RHEL system acts as the compromised endpoint.
 
 The objective was to detect, investigate, and respond to simulated attacks using native Linux logging and analysis tools.
@@ -17,7 +17,6 @@ The objective was to detect, investigate, and respond to simulated attacks using
 - Detect attacker persistence mechanisms
 - Investigate suspicious processes and open ports
 - Perform containment and incident response actions
-- Conduct manual log analysis without SIEM platforms
 
 ---
 
